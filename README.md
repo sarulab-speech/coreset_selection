@@ -26,7 +26,6 @@ from coreset import execute_coreset_selection
 selected_files = execute_coreset_selection(
     feature_dict_path="diversity.pt",
     quality_dict_path="nisqa.pt",
-    alpha=8,
     size=4000,
     device=None  # automatically uses CUDA if available
 )
@@ -38,7 +37,6 @@ selected_files = execute_coreset_selection(
 | ------------------- | ------------------------ | ------------------------------------------------------- |
 | `feature_dict_path` | `str`                    | Path to a `.pt` file containing `{key: feature_tensor}` |
 | `quality_dict_path` | `str`                    | Path to a `.pt` file containing `{key: quality_score}`  |
-| `alpha`             | `int`                    | Quality exponent. If `0`, quality is ignored            |
 | `size`              | `int`                    | Number of samples to select                             |
 | `device`            | `torch.device` or `None` | Computation device                                      |
 
